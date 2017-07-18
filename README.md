@@ -1,7 +1,7 @@
-Role Demo Sample
+The One Village One Product Movement
 ==================================================
 
-This sample is based on *User Demo* sample. It shows how to:
+This project was developed by [Resolvo Cambodia](https://resolvocam.com). It shows how to:
 
  * Implement roles and permissions in your website
  * Organize roles in database into an hierarchy
@@ -12,10 +12,10 @@ This sample is based on *User Demo* sample. It shows how to:
 
 You need to have Apache 2.4 HTTP server, PHP v.5.6 or later with `gd` and `intl` extensions, and MySQL 5.6 or later.
 
-Download the sample to some directory (it can be your home dir or `/var/www/html`) and run Composer as follows:
+Download the project repository to some directory (it can be your home dir or `/var/www/html`) and run Composer as follows:
 
 ```
-php composer.phar install
+composer install
 ```
 
 The command above will install the dependencies (Zend Framework and Doctrine).
@@ -23,7 +23,7 @@ The command above will install the dependencies (Zend Framework and Doctrine).
 Enable development mode:
 
 ```
-php composer.phar development-enable
+composer development-enable
 ```
 
 Create the `data/cache` directory:
@@ -49,7 +49,7 @@ Adjust permissions for `public/img/captcha` directory:
 
 ```
 sudo chown -R www-data:www-data public/img/captcha
-sudo chmod -R 775 public/img/captcha 
+sudo chmod -R 775 public/img/captcha
 ```
 
 Create `config/autoload/local.php` config file by copying its distrib version:
@@ -69,8 +69,8 @@ mysql -u root -p
 Create database:
 
 ```
-CREATE DATABASE roledemo;
-GRANT ALL PRIVILEGES ON roledemo.* TO roledemo@localhost identified by '<your_password>';
+CREATE DATABASE ovop_db;
+GRANT ALL PRIVILEGES ON ovop_db.* TO ovop_db@localhost identified by '<your_password>';
 quit
 ```
 
@@ -84,24 +84,25 @@ Then create an Apache virtual host. It should look like below:
 
 ```
 <VirtualHost *:80>
-    DocumentRoot /path/to/roledemo/public
-    
-    <Directory /path/to/roledemo/public/>
-        DirectoryIndex index.php
-        AllowOverride All
-        Require all granted
-    </Directory>
+    # ServerName ovopcambo.local
+    DocumentRoot "C:\wamp\www\ovopcambo\public"
+
+	<Directory  "C:\wamp\www\ovopcambo\public">
+		Options +Indexes +Includes +FollowSymLinks +MultiViews
+		AllowOverride All
+		Require local
+	</Directory>
 
 </VirtualHost>
 ```
 
-Now you should be able to see the Role Demo website by visiting the link "http://localhost/". 
- 
+Now you should be able to see the ovop website by visiting the link "http://localhost/".
+
 ## License
 
-This code is provided under the [BSD-like license](https://en.wikipedia.org/wiki/BSD_licenses). 
+This code is provided under the [BSD-like license](https://en.wikipedia.org/wiki/BSD_licenses).
 
 ## Contributing
 
-If you found a mistake or a bug, please report it using the [Issues](https://github.com/olegkrivtsov/using-zf3-book-samples/issues) page. 
+If you found a mistake or a bug, please report it using the [Issues](https://github.com/gionabbe/ovopcambo/issues) page.
 Your feedback is highly appreciated.
