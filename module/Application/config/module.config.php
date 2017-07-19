@@ -10,6 +10,7 @@ namespace Application;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
+use Application\Controller\IndexController;
 
 return [
     'router' => [
@@ -47,7 +48,27 @@ return [
                         'action'     => 'about',
                     ],
                 ],
-            ],            
+            ],
+            'mission'   => [
+                'type'  => Literal::class,
+                'options' => [
+                    'route'     => '/mission',
+                    'defaults'  => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'mission',
+                    ],
+                ],
+            ],
+            'vision'    => [
+                'type'  => Literal::class,
+                'options' => [
+                    'route'     => '/vision',
+                    'defaults'  => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'vision',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -60,17 +81,17 @@ return [
     'access_filter' => [
         'options' => [
             // The access filter can work in 'restrictive' (recommended) or 'permissive'
-            // mode. In restrictive mode all controller actions must be explicitly listed 
-            // under the 'access_filter' config key, and access is denied to any not listed 
-            // action for not logged in users. In permissive mode, if an action is not listed 
-            // under the 'access_filter' key, access to it is permitted to anyone (even for 
+            // mode. In restrictive mode all controller actions must be explicitly listed
+            // under the 'access_filter' config key, and access is denied to any not listed
+            // action for not logged in users. In permissive mode, if an action is not listed
+            // under the 'access_filter' key, access to it is permitted to anyone (even for
             // not logged in users. Restrictive mode is more secure and recommended to use.
             'mode' => 'restrictive'
         ],
         'controllers' => [
             Controller\IndexController::class => [
-                // Allow anyone to visit "index" and "about" actions
-                ['actions' => ['index', 'about'], 'allow' => '*'],
+                // Allow anyone to visit "index", "about", "mission" and "vision" actions
+                ['actions' => ['index', 'about', 'mission', 'vision'], 'allow' => '*'],
                 // Allow authorized users to visit "settings" action
                 ['actions' => ['settings'], 'allow' => '@']
             ],
@@ -119,5 +140,5 @@ return [
             'message_close_string'     => '</li></ul></div>',
             'message_separator_string' => '</li><li>'
         ]
-    ],   
+    ],
 ];

@@ -39,8 +39,40 @@ class IndexController extends AbstractActionController
      */
     public function aboutAction()
     {
-        $appName = 'Role Demo';
-        $appDescription = 'This demo shows how to implement role-based access control with Zend Framework 3';
+        $appName = 'OVOP User Role';
+        $appDescription = 'This is the implementation of user role-based access control with RBAC of Zend Framework 3 in ovop project';
+
+        // Return variables to view script with the help of
+        // ViewObject variable container
+        return new ViewModel([
+            'appName' => $appName,
+            'appDescription' => $appDescription
+        ]);
+    }
+
+    /**
+     * This is the "mission" action. It is used to display the "Mission" page.
+     */
+    public function missionAction()
+    {
+        $appName = 'OVOP Mission';
+        $appDescription = 'This is the mission page of ovop project';
+
+        // Return variables to view script with the help of
+        // ViewObject variable container
+        return new ViewModel([
+            'appName' => $appName,
+            'appDescription' => $appDescription
+        ]);
+    }
+
+    /**
+     * This is the "vision" action. It is used to display the "Vision" page.
+     */
+    public function visionAction()
+    {
+        $appName = 'OVOP Vision';
+        $appDescription = 'This is the vision page of ovop project';
 
         // Return variables to view script with the help of
         // ViewObject variable container

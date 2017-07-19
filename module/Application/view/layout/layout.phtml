@@ -3,12 +3,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?= $this->headTitle('Role Demo')->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?= $this->headTitle('OVOP')->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?= $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
         ?>
+
+		<!-- Khmer fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Moul' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Freehand' rel='stylesheet' type='text/css'>
 
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
@@ -25,12 +29,41 @@
     </head>
     <body>
         <div class="container">
-            <div class="row">
+        	<div class="row">
+        		<!-- Page header -->
+        		<div class="col-md-12">
+        			<div class="ovop-header">
+        				<div class="row">
+        					<div class="col-md-2 text-center">
+        						<img alt="moc logo" src="<?= $this->basePath('/img/moc-logo.png'); ?>" style="size: 100%; height: 130px;">
+        					</div>
+        					<div class="col-md-8 text-center">
+        						<h2 style="font-family: 'Moul', cursive;">
+                					<span class="card-kh">ក្រុមប្រឹក្សាស្ដារវិស័យកសិកម្ម និង អភិវឌ្ឍន៍ជនបទ</span><br>
+                					<span class="card-en">Council of Agriculture and Rural Development</span>
+                				</h2>
+                				<h3 style="font-family: 'Freehand', cursive;">
+                					<span class="ncovop-kh">គណៈកម្មាធិការជាតិជំរុញចលនា ភូមិ១ផលិតផល១</span><br>
+                					<span class="ncovop-en">National Committee of One Village One Product Movement</span>
+                				</h3>
+        					</div>
+        					<div class="col-md-2 text-center">
+        						<img alt="ovop logo" src="<?= $this->basePath('/img/ovop-logo.png');?>" style="size: 100%; height: 130px;">
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="row"
+    		style="background-color: #5cb85c; padding-top: 20px; padding-bottom: 20px; margin-left: 0px; margin-right: 0px;">
+
+    		</div>
+            <!-- <div class="row"> -->
                 <!-- Page header -->
-                <div class="col-md-4">
-                    <div class="app-caption">Role Demo</div>
-                </div>                
-            </div>
+                <!-- <div class="col-md-12">
+                    <div class="app-caption">User Role</div>
+                </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-12">
                     <!-- Navigation bar -->
@@ -60,7 +93,7 @@
             </div>
             <hr>
             <footer>
-                <p>&copy; 2005 - <?= date('Y') ?> by Your Company. All rights reserved.</p>
+                <p>&copy; 2017 - <?= date('Y') ?> The One Village One Product Movement of Cambodia. All rights reserved.</p>
             </footer>
         </div>
         <?= $this->inlineScript() ?>
