@@ -34,15 +34,10 @@ div.container a.navbar-brand > img {
     margin-right: 4px;
 }
 
-div.app-caption {
-    padding: 25px 0px;
-    font-size:3.0em;
-    font-weight: bold;
-    color:#6aacaf
-}
-
-div.ovop-header {
-
+div.page-header {
+	padding: 20px 0;
+	margin: 0;
+	background-color: #5cb85c;
 }
 
 form ul {
@@ -59,4 +54,10 @@ form ul li {
   list-style-type: none;
   padding: 0px;
   margin: 0px 5px;
+}
+
+@media (min-width: 768px) {
+	.navbar-left {
+		margin-left: -15px;
+	}
 }

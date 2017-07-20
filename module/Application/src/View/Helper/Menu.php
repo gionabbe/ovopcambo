@@ -68,7 +68,7 @@ class Menu extends AbstractHelper
         $result .= '</div>';
 
         $result .= '<div class="collapse navbar-collapse navbar-ex1-collapse">';
-        $result .= '<ul class="nav navbar-nav">';
+        $result .= '<ul class="nav navbar-nav navbar-left">';
 
         // Render items
         foreach ($this->items as $item) {
