@@ -1,5 +1,6 @@
 body {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+	font-family: 'Open Sans', helvetica, arial;
 }
 
 .zf-green {
@@ -40,6 +41,16 @@ div.page-header {
 	background-color: #5cb85c;
 }
 
+div.page-footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 20px 0;
+	position: absolute;
+	color: #fff;
+	background-color: gray;
+}
+
 form ul {
   list-style-type: none;
   padding: 0px;
@@ -60,4 +71,31 @@ form ul li {
 	.navbar-left {
 		margin-left: -15px;
 	}
+}
+
+.moc-logo,
+.ovop-logo {
+	width: auto;
+	height: 140px;
+}
+.card {
+	margin: 0;
+	padding-bottom: 10px;
+}
+.ncovop {
+	margin: 0;
+	padding-top: 10px;
+}
+.card-kh {
+	font-family: 'Moul', cursive;
+}
+.card-en {
+	font-size: 30px;
+	font-weight: bold;
+}
+.ncovop-kh {
+	font-family: 'Freehand', cursive;
+}
+.ncovop-en {
+	font-size: 20px;
 }
