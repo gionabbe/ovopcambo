@@ -1,5 +1,4 @@
 body {
-    padding-bottom: 20px;
 	font-family: 'Open Sans', helvetica, arial;
 }
 
@@ -41,12 +40,16 @@ div.page-header {
 	background-color: #5cb85c;
 }
 
+div.page-body {
+
+}
+
 div.page-footer {
 	bottom: 0;
 	left: 0;
 	right: 0;
 	padding: 20px 0;
-	position: absolute;
+	position: relative;
 	color: #fff;
 	background-color: gray;
 }
@@ -70,6 +73,9 @@ form ul li {
 @media (min-width: 768px) {
 	.navbar-left {
 		margin-left: -15px;
+	}
+	.page-body {
+		min-height: 730px;
 	}
 }
 
