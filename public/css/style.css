@@ -1,0 +1,107 @@
+body {
+	font-family: 'Open Sans', helvetica, arial;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.navbar-brand > img {
+    display: inline;
+    margin-right: 4px;
+}
+
+div.page-header {
+	padding: 20px 0;
+	margin: 0;
+	background-color: #5cb85c;
+}
+
+div.page-body {
+
+}
+
+div.page-footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 20px 0;
+	position: relative;
+	color: #fff;
+	background-color: gray;
+}
+
+form ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px 5px;
+}
+
+form ul li {
+  color: red;
+}
+
+.alert ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px 5px;
+}
+
+@media (min-width: 768px) {
+	.navbar-left {
+		margin-left: -15px;
+	}
+	.page-body {
+		min-height: 730px;
+	}
+}
+
+.moc-logo,
+.ovop-logo {
+	width: auto;
+	height: 140px;
+}
+.card {
+	margin: 0;
+	padding-bottom: 10px;
+}
+.ncovop {
+	margin: 0;
+	padding-top: 10px;
+}
+.card-kh {
+	font-family: 'Moul', cursive;
+}
+.card-en {
+	font-size: 30px;
+	font-weight: bold;
+}
+.ncovop-kh {
+	font-family: 'Freehand', cursive;
+}
+.ncovop-en {
+	font-size: 20px;
+}

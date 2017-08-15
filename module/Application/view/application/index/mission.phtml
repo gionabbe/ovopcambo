@@ -1,0 +1,20 @@
+<?php
+$this->headTitle('Mission');
+
+$this->mainMenu()->setActiveItemId('mission');
+
+$this->pageBreadcrumbs()->setItems([
+            'Home'      =>$this->url('home'),
+            'Mission'   => $this->url('mission'),
+            ]);
+?>
+
+<h1>Mission</h1>
+
+<p>
+    Mission name: <?= $this->escapeHtml($appName) ?>
+</p>
+
+<p>
+    Mission description: <?= $this->escapeHtml($appDescription) ?>
+</p>

@@ -1,0 +1,98 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('OVOP')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+		<!-- Khmer fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Moul' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Freehand' rel='stylesheet' type='text/css'>
+
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        ?>
+
+        <!-- Scripts -->
+        <?= $this->headScript()
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-2.2.4.min.js'))
+        ?>
+    </head>
+    <body>
+    	<div class="page-header">
+    		<div class="container">
+    			<div class="row">
+            		<!-- Page header -->
+					<div class="col-md-2 text-left">
+						<img class="moc-logo" alt="moc logo" src="<?= $this->basePath('/img/moc-logo.png'); ?>">
+					</div>
+					<div class="col-md-8 text-center">
+						<h2 class="card">
+        					<span class="card-kh">ក្រុមប្រឹក្សាស្ដារវិស័យកសិកម្ម និង អភិវឌ្ឍន៍ជនបទ</span><br>
+        					<span class="card-en">Council of Agriculture and Rural Development</span>
+        				</h2>
+						<h3 class="ncovop">
+        					<span class="ncovop-kh">គណៈកម្មាធិការជាតិជំរុញចលនា ភូមិ១ផលិតផល១</span><br>
+        					<span class="ncovop-en">National Committee of One Village One Product Movement</span>
+        				</h3>
+					</div>
+					<div class="col-md-2 text-right">
+						<img class="ovop-logo" alt="ovop logo" src="<?= $this->basePath('/img/ovop-logo.png');?>">
+					</div>
+            	</div>
+    		</div>
+    	</div>
+        <div class="page-body">
+        	<div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Navigation bar -->
+                        <?php
+                        // Check if the activeMenuItemId passed to layout view model
+                        // and if so, use it for setting active navbar item.
+                        if (isset($activeMenuItemId)) {
+                            $this->mainMenu()->setActiveItemId($activeMenuItemId);
+                        }
+
+                        // Render the navbar
+                        echo $this->mainMenu()->render();
+                        ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Breadcrumbs -->
+                        <?= $this->pageBreadcrumbs()->render(); ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Page content placeholder -->
+                        <?= $this->content; ?>
+                    </div>
+                </div>
+                <hr>
+                <!-- <footer>
+                    <p>Copyright &copy; <?// = date('Y') ?> &nbsp; The One Village One Product Movement of Cambodia. All rights reserved.</p>
+                </footer> -->
+            </div>
+        </div>
+        <div class="page-footer">
+        	<div class="container">
+        		<footer>
+                    <p>Copyright &copy; <?= date('Y') ?> &nbsp; The One Village One Product Movement of Cambodia. All rights reserved.</p>
+                </footer>
+        	</div>
+        </div>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>
