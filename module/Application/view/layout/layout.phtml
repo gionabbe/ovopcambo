@@ -25,6 +25,7 @@
         <?= $this->headScript()
             ->prependFile($this->basePath('js/bootstrap.min.js'))
             ->prependFile($this->basePath('js/jquery-2.2.4.min.js'))
+            ->prependFile($this->basepath('js/script.js'))
         ?>
     </head>
     <body>
@@ -32,21 +33,25 @@
     		<div class="container">
     			<div class="row">
             		<!-- Page header -->
-					<div class="col-md-2 text-left">
-						<img class="moc-logo" alt="moc logo" src="<?= $this->basePath('/img/moc-logo.png'); ?>">
+					<div class="col-md-2 col-sm-2 text-center">
+						<div class="img-responsive">
+							<img class="moc-logo" alt="moc logo" src="<?= $this->basePath('/img/moc-logo.png'); ?>">
+						</div>
 					</div>
-					<div class="col-md-8 text-center">
+					<div class="col-md-8 col-sm-8 text-center">
 						<h2 class="card">
-        					<span class="card-kh">ក្រុមប្រឹក្សាស្ដារវិស័យកសិកម្ម និង អភិវឌ្ឍន៍ជនបទ</span><br>
-        					<span class="card-en">Council of Agriculture and Rural Development</span>
+        					<span class="card-kh">ក្រុមប្រឹក្សា​ស្ដារ​អភិវឌ្ឍន៍ ​វិស័យកសិកម្ម ​និង​ជនបទ</span><br>
+        					<span class="card-en">Council for Agricultural and Rural Development</span>
         				</h2>
 						<h3 class="ncovop">
-        					<span class="ncovop-kh">គណៈកម្មាធិការជាតិជំរុញចលនា ភូមិ១ផលិតផល១</span><br>
+        					<span class="ncovop-kh">គណៈកម្មា​ធិការ​ជាតិ​ ជំរុញចលនា ​ភូមិ១​ផលិតផល១</span><br>
         					<span class="ncovop-en">National Committee of One Village One Product Movement</span>
         				</h3>
 					</div>
-					<div class="col-md-2 text-right">
-						<img class="ovop-logo" alt="ovop logo" src="<?= $this->basePath('/img/ovop-logo.png');?>">
+					<div class="col-md-2 col-sm-2 text-center">
+						<div class="img-responsive">
+							<img class="ovop-logo" alt="ovop logo" src="<?= $this->basePath('/img/ovop-logo.png');?>">
+						</div>
 					</div>
             	</div>
     		</div>
@@ -89,7 +94,22 @@
         <div class="page-footer">
         	<div class="container">
         		<footer>
-                    <p>Copyright &copy; <?= date('Y') ?> &nbsp; The One Village One Product Movement of Cambodia. All rights reserved.</p>
+        			<div class="row">
+        				<div class="col-md-12">
+							<ul class="footer-top-link">
+								<li><a href="<?= $this->url('about')?>" target="_blank">About</a></li>
+								<li><a href="<?= $this->url('mission')?>" target="_blank">Mission</a></li>
+								<li><a href="<?= $this->url('vision')?>" target="_blank">Vision</a></li>
+								<li><a href="<?// = $this->url('policy')?>" target="_blank">Policy</a></li>
+								<li><a href="<?// = $this->url('terms')?>" target="_blank">Terms</a></li>
+							</ul>
+        				</div>
+        			</div>
+        			<div class="row">
+        				<div class="col-md-12">
+        					Copyright &copy; <?= date('Y') ?> &nbsp; The One Village One Product Movement of Cambodia. All rights reserved.
+        				</div>
+        			</div>
                 </footer>
         	</div>
         </div>

@@ -50,8 +50,9 @@ div.page-footer {
 	right: 0;
 	padding: 20px 0;
 	position: relative;
-	color: #fff;
-	background-color: gray;
+	color: #9fa6ad;
+	font-size: 12px;
+	background-color: #242729;
 }
 
 form ul {
@@ -81,8 +82,8 @@ form ul li {
 
 .moc-logo,
 .ovop-logo {
-	width: auto;
-	height: 140px;
+	max-width: 100%;
+	max-height: 140px;
 }
 .card {
 	margin: 0;
@@ -105,3 +106,26 @@ form ul li {
 .ncovop-en {
 	font-size: 20px;
 }
+
+/* login page */
+.text {
+	margin-bottom: 10px;
+}
+
+ul.footer-top-link {
+	padding: 0px;
+}
+ul.footer-top-link li {
+	padding-right: 15px;
+	display: inline-block;
+	font-size: 14px;
+}
+ul.footer-top-link li a {
+	color: #9fa6ad;
+}
+ul.footer-top-link li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
