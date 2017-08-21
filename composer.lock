@@ -539,16 +539,16 @@
         },
         {
             "name": "doctrine/doctrine-orm-module",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineORMModule.git",
-                "reference": "1057dcf1e350346733236082bd63239eff14d083"
+                "reference": "ed027b9ad3e058171bac741aceb6f7dcc4ec6cbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/1057dcf1e350346733236082bd63239eff14d083",
-                "reference": "1057dcf1e350346733236082bd63239eff14d083",
+                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/ed027b9ad3e058171bac741aceb6f7dcc4ec6cbc",
+                "reference": "ed027b9ad3e058171bac741aceb6f7dcc4ec6cbc",
                 "shasum": ""
             },
             "require": {
@@ -623,7 +623,7 @@
                 "orm",
                 "zf"
             ],
-            "time": "2017-06-02T22:05:52+00:00"
+            "time": "2017-08-17T17:20:15+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -876,16 +876,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.5.9",
+            "version": "v2.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "4f96fc62cef60093573acea955ed5e07643401d8"
+                "reference": "c78afd51721804f4f76ff30d9b6f6159eb046161"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/4f96fc62cef60093573acea955ed5e07643401d8",
-                "reference": "4f96fc62cef60093573acea955ed5e07643401d8",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/c78afd51721804f4f76ff30d9b6f6159eb046161",
+                "reference": "c78afd51721804f4f76ff30d9b6f6159eb046161",
                 "shasum": ""
             },
             "require": {
@@ -948,7 +948,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-08-16T13:30:32+00:00"
+            "time": "2017-08-18T19:17:35+00:00"
         },
         {
             "name": "ocramius/package-versions",

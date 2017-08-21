@@ -16,13 +16,16 @@
 
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basepath('highmaps/css/highcharts.css'))
                         ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
                         ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
         ?>
 
         <!-- Scripts -->
         <?= $this->headScript()
+            ->prependFile($this->basepath('highmaps/countries/kh/kh-all.js'))
+            ->prependFile($this->basepath('highmaps/js/highmaps.js'))
             ->prependFile($this->basePath('js/bootstrap.min.js'))
             ->prependFile($this->basePath('js/jquery-2.2.4.min.js'))
             ->prependFile($this->basepath('js/script.js'))
@@ -100,8 +103,10 @@
 								<li><a href="<?= $this->url('about')?>" target="_blank">About</a></li>
 								<li><a href="<?= $this->url('mission')?>" target="_blank">Mission</a></li>
 								<li><a href="<?= $this->url('vision')?>" target="_blank">Vision</a></li>
-								<li><a href="<?// = $this->url('policy')?>" target="_blank">Policy</a></li>
+								<li><a href="<?// = $this->url('policy')?>" target="_blank">Privacy</a></li>
 								<li><a href="<?// = $this->url('terms')?>" target="_blank">Terms</a></li>
+								<li><a href="<?// = $this->url('policy')?>" target="_blank">Contact</a></li>
+								<li><a href="<?// = $this->url('terms')?>" target="_blank">Help</a></li>
 							</ul>
         				</div>
         			</div>

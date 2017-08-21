@@ -13,10 +13,11 @@ $this->pageBreadcrumbs()->setItems([
 <p>
     to <b>o</b>ne <b>v</b>illage <b>o</b>ne <b>p</b>roduct movement of Cambodia (OVOP-Cambo).
     You'll find plenty of products of Cambodia which provided usefull information and services,
-    plus user control by creating a free account. <br><br>
+    plus user control by creating a free account.
+    <br><br>
     Find out more on <a href="<?= $this->url('application', ['action'=>'setting'])?>">user policy.</a>
 </p>
-<br><br>
+<br>
 <p>
 	<strong>Hint:</strong> not yet have an account, simply <a href="<?= $this->url('login', ['action'=>'login'])?>">create one</a>
 	or use the following credentials to sign in by clicking the <em>Sign in</em> button at the top right.
@@ -25,3 +26,179 @@ $this->pageBreadcrumbs()->setItems([
         <li>Password: <em>password010</em></li>
     </ul>
 </p>
+
+<div class="row">
+    <!-- Highmaps of Cambodia -->
+	<div class="col-md-8">
+		<div id="highmaps"></div>
+	</div>
+	<!-- Current News -->
+	<div class="col-md-4">
+		<div id="news" class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">Current News</div>
+			</div>
+			<div class="panel-body">
+
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function () {
+
+    // Prepare demo data
+    var data = [
+        {
+            "hc-key": "kh-kk",
+            "value": 0,
+        },
+        {
+            "hc-key": "kh-pp",
+            "value": 1
+        },
+        {
+            "hc-key": "kh-ka",
+            "value": 2
+        },
+        {
+            "hc-key": "kh-om",
+            "value": 3
+        },
+        {
+            "hc-key": "kh-ba",
+            "value": 4
+        },
+        {
+            "hc-key": "kh-po",
+            "value": 5
+        },
+        {
+            "hc-key": "kh-si",
+            "value": 6
+        },
+        {
+            "hc-key": "kh-oc",
+            "value": 7
+        },
+        {
+            "hc-key": "kh-pl",
+            "value": 8
+        },
+        {
+            "hc-key": "kh-km",
+            "value": 9
+        },
+        {
+            "hc-key": "kh-kg",
+            "value": 10
+        },
+        {
+            "hc-key": "kh-kn",
+            "value": 11
+        },
+        {
+            "hc-key": "kh-ks",
+            "value": 12
+        },
+        {
+            "hc-key": "kh-kt",
+            "value": 13
+        },
+        {
+            "hc-key": "kh-py",
+            "value": 14
+        },
+        {
+            "hc-key": "kh-ph",
+            "value": 15
+        },
+        {
+            "hc-key": "kh-st",
+            "value": 16
+        },
+        {
+            "hc-key": "kh-kh",
+            "value": 17
+        },
+        {
+            "hc-key": "kh-mk",
+            "value": 18
+        },
+        {
+            "hc-key": "kh-ro",
+            "value": 19
+        },
+        {
+            "hc-key": "kh-kp",
+            "value": 20
+        },
+        {
+            "hc-key": "kh-ke",
+            "value": 21
+        },
+        {
+            "hc-key": "kh-sr",
+            "value": 22
+        },
+        {
+            "hc-key": "kh-ta",
+            "value": 23,
+
+        }
+    ];
+
+    // Initiate the chart
+    $('#highmaps').highcharts('Map', {
+
+        title : {
+            text : 'Highmaps Of Cambodia'
+        },
+
+        subtitle : {
+            text : 'Source Map: <a href="https://code.highcharts.com/mapdata/countries/kh/kh-all.js">Cambodia</a>'
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        colorAxis: {
+            min: 0
+        },
+
+        series : [{
+            data : data,
+            mapData: Highcharts.maps['countries/kh/kh-all'],
+            joinBy: 'hc-key',
+            name: 'Random data',
+            states: {
+                hover: {
+                    color: '#5cb85c'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }]
+    });
+});
+</script>
+
+<!-- Product -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-search">
+
+			</div>
+			<div class="panel-body">
+
+			</div>
+		</div>
+	</div>
+</div>
