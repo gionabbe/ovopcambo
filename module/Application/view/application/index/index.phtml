@@ -8,24 +8,61 @@ $this->pageBreadcrumbs()->setItems([
             ]);
 ?>
 
-<h1>Welcome</h1>
+<div class="jumbotron">
+	<h1>Welcome</h1>
 
-<p>
-    to <b>o</b>ne <b>v</b>illage <b>o</b>ne <b>p</b>roduct movement of Cambodia (OVOP-Cambo).
-    You'll find plenty of products of Cambodia which provided usefull information and services,
-    plus user control by creating a free account.
-    <br><br>
-    Find out more on <a href="<?= $this->url('application', ['action'=>'setting'])?>">user policy.</a>
-</p>
-<br>
-<p>
-	<strong>Hint:</strong> not yet have an account, simply <a href="<?= $this->url('login', ['action'=>'login'])?>">create one</a>
-	or use the following credentials to sign in by clicking the <em>Sign in</em> button at the top right.
-    <ul>
-        <li>Username: <em>jedipann@gmail.com</em></li>
-        <li>Password: <em>password010</em></li>
-    </ul>
-</p>
+    <p>
+        to <b>O</b>ne <b>V</b>illage <b>O</b>ne <b>P</b>roduct movement of Cambodia (OVOP-Cambo).
+        You'll find plenty of Cambodia products, which provided its usefull information and services,
+        plus a user access control by creating a free account.
+    </p>
+    <p>
+        Find out more on <a href="<?= $this->url('privacy', ['action'=>'privacy'])?>">user policy.</a>
+    </p>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">Need help</div>
+			</div>
+			<div class="panel-body">
+				If you need help, you can find a <b><em>Help</em></b> link in the bottum of this webpage. <br>
+				Or contact us by following the <b><em>Contact</em></b> link along side.
+
+				<br><br>
+
+				<i class="glyphicon glyphicon-star-empty"></i> Please read our <a href="<?= $this->url('privacy', ['action'=>'privacy']) ?>">privacy policy</a>
+				and the <a <?= $this->url('terms', ['action'=>'terms']) ?>>terms of use</a> in every aspect in this OVOP website.
+
+				<br><br>
+
+				<i class="text-warning">Don't forget to send us feedback if you have any query problem or suggestion.</i>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">Hint</div>
+			</div>
+			<div class="panel-body">
+				<i class="glyphicon glyphicon-thumbs-up"></i> Not yet have an account,
+				simply <a href="<?= $this->url('login', ['action'=>'login'])?>">create one</a>
+            	or use the following credentials to sign in by clicking the <b><em>Sign in</em></b> button at the top right.
+
+                <br><br>
+
+                <ul>
+                    <li>Username: <em>jedipann@gmail.com</em></li>
+                    <li>Password: <em>password010</em></li>
+                </ul>
+                <i class="text-warning">This above credential user is used as a demo only.</i>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class="row">
     <!-- Highmaps of Cambodia -->

@@ -30,9 +30,9 @@ class NavManager
      */
     public function __construct($authService, $urlHelper, $rbacManager)
     {
-        $this->authService = $authService;
-        $this->urlHelper = $urlHelper;
-        $this->rbacManager = $rbacManager;
+        $this->authService  = $authService;
+        $this->urlHelper    = $urlHelper;
+        $this->rbacManager  = $rbacManager;
     }
 
     /**
@@ -44,34 +44,60 @@ class NavManager
         $items = [];
 
         $items[] = [
-            'id' => 'home',
+            'id'    => 'home',
             'label' => 'Home',
             'link'  => $url('home')
         ];
 
         $items[] = [
-            'id' => 'about',
+            'id'    => 'about',
             'label' => 'About',
             'link'  => $url('about')
         ];
 
         $items[] = [
-            'id' => 'mission',
+            'id'    => 'mission',
             'label' => 'Mission',
             'link'  => $url('mission')
         ];
 
         $items[] = [
-            'id' => 'vision',
+            'id'    => 'vision',
             'label' => 'Vision',
             'link'  => $url('vision')
         ];
+
+        $items[] = [
+            'id'    => 'privacy',
+            'label' => 'Privacy',
+            'link'  => $url('privacy')
+        ];
+
+        $items[] = [
+            'id'    => 'terms',
+            'label' => 'Terms',
+            'link'  => $url('terms')
+        ];
+
+        $items[] = [
+            'id'    => 'contact',
+            'label' => 'Contact',
+            'link'  => $url('contact')
+        ];
+
+        $items[] = [
+            'id'    => 'help',
+            'label' => 'Help',
+            'link'  => $url('help')
+        ];
+
+
 
         // Display "Login" menu item for non authorized user only. On the other hand,
         // display "Admin" and "Logout" menu items only for authorized users.
         if (!$this->authService->hasIdentity()) {
             $items[] = [
-                'id' => 'login',
+                'id'    => 'login',
                 'label' => 'Sign in',
                 'link'  => $url('login'),
                 'float' => 'right'

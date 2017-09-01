@@ -1,9 +1,5 @@
-body {
+body.body {
 	font-family: 'Open Sans', helvetica, arial;
-}
-
-.zf-green {
-    color: #68b604;
 }
 
 .btn-success {
