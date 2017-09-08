@@ -49,7 +49,7 @@ class NavManager
             'link'  => $url('home')
         ];
 
-        $items[] = [
+        /* $items[] = [
             'id'    => 'about',
             'label' => 'About',
             'link'  => $url('about')
@@ -89,7 +89,7 @@ class NavManager
             'id'    => 'help',
             'label' => 'Help',
             'link'  => $url('help')
-        ];
+        ]; */
 
 
 

@@ -1,20 +1,20 @@
 <?php
-$this->headTitle('Vision');
+$this->headTitle('Terms');
 
-$this->mainMenu()->setActiveItemId('vision');
+$this->mainMenu()->setActiveItemId('terms');
 
 $this->pageBreadcrumbs()->setItems([
             'Home'      =>$this->url('home'),
-            'Vision'    => $this->url('vision'),
+            'Terms'    => $this->url('terms'),
             ]);
 ?>
 
-<h1>Vision</h1>
+<h1>Terms</h1>
 
 <p>
-    Vision name: <?= $this->escapeHtml($appName) ?>
+    Terms name: <?= $this->escapeHtml($appName) ?>
 </p>
 
 <p>
-    Vision description: <?= $this->escapeHtml($appDescription) ?>
+    Terms description: <?= $this->escapeHtml($appDescription) ?>
 </p>
