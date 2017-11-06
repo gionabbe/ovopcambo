@@ -8,6 +8,12 @@ $this->pageBreadcrumbs()->setItems([
             ]);
 ?>
 
+<?php echo $this->headlink()->prependStylesheet($this->basepath('highmaps/css/highcharts.css')) ?>
+<?php echo $this->headscript()
+            ->prependFile($this->basepath('highmaps/countries/kh/kh-all.js'))
+            ->prependFile($this->basepath('highmaps/js/modules/exporting.js'))
+            ->prependFile($this->basepath('highmaps/js/highmaps.js')) ?>
+
 <div class="jumbotron">
 	<h1>Welcome</h1>
 
