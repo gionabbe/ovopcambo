@@ -69,6 +69,46 @@ return [
                     ],
                 ],
             ],
+            'privacy'   => [
+                'type'  => Literal::class,
+                'options' => [
+                    'route'     => '/privacy',
+                    'defaults'  => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'privacy',
+                    ],
+                ],
+            ],
+            'terms'     => [
+                'type'  => Literal::class,
+                'options' => [
+                    'route'     => '/terms',
+                    'defaults'  => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'terms',
+                    ],
+                ],
+            ],
+            'contact'     => [
+                'type'  => Literal::class,
+                'options' => [
+                    'route'     => '/contact',
+                    'defaults'  => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'contact',
+                    ],
+                ],
+            ],
+            'help'     => [
+                'type'  => Literal::class,
+                'options' => [
+                    'route'     => '/help',
+                    'defaults'  => [
+                        'controller'    => Controller\IndexController::class,
+                        'action'        => 'help',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -90,8 +130,8 @@ return [
         ],
         'controllers' => [
             Controller\IndexController::class => [
-                // Allow anyone to visit "index", "about", "mission" and "vision" actions
-                ['actions' => ['index', 'about', 'mission', 'vision'], 'allow' => '*'],
+                // Allow anyone to visit "index", "about", "mission", "vision", "privacy", "terms", "contact" and "help" actions
+                ['actions' => ['index', 'about', 'mission', 'vision', 'privacy', 'terms', 'contact', 'help'], 'allow' => '*'],
                 // Allow authorized users to visit "settings" action
                 ['actions' => ['settings'], 'allow' => '@']
             ],

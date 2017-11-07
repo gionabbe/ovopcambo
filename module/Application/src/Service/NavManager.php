@@ -30,9 +30,9 @@ class NavManager
      */
     public function __construct($authService, $urlHelper, $rbacManager)
     {
-        $this->authService = $authService;
-        $this->urlHelper = $urlHelper;
-        $this->rbacManager = $rbacManager;
+        $this->authService  = $authService;
+        $this->urlHelper    = $urlHelper;
+        $this->rbacManager  = $rbacManager;
     }
 
     /**
@@ -44,34 +44,17 @@ class NavManager
         $items = [];
 
         $items[] = [
-            'id' => 'home',
+            'id'    => 'home',
             'label' => 'Home',
             'link'  => $url('home')
         ];
 
-        $items[] = [
-            'id' => 'about',
-            'label' => 'About',
-            'link'  => $url('about')
-        ];
-
-        $items[] = [
-            'id' => 'mission',
-            'label' => 'Mission',
-            'link'  => $url('mission')
-        ];
-
-        $items[] = [
-            'id' => 'vision',
-            'label' => 'Vision',
-            'link'  => $url('vision')
-        ];
 
         // Display "Login" menu item for non authorized user only. On the other hand,
         // display "Admin" and "Logout" menu items only for authorized users.
         if (!$this->authService->hasIdentity()) {
             $items[] = [
-                'id' => 'login',
+                'id'    => 'login',
                 'label' => 'Sign in',
                 'link'  => $url('login'),
                 'float' => 'right'
@@ -83,26 +66,26 @@ class NavManager
 
             if ($this->rbacManager->isGranted(null, 'user.manage')) {
                 $adminDropdownItems[] = [
-                            'id' => 'users',
-                            'label' => 'Manage Users',
-                            'link' => $url('users')
-                        ];
-            }
-
-            if ($this->rbacManager->isGranted(null, 'permission.manage')) {
-                $adminDropdownItems[] = [
-                            'id' => 'permissions',
-                            'label' => 'Manage Permissions',
-                            'link' => $url('permissions')
-                        ];
+                    'id' => 'users',
+                    'label' => 'Manage Users',
+                    'link' => $url('users')
+                ];
             }
 
             if ($this->rbacManager->isGranted(null, 'role.manage')) {
                 $adminDropdownItems[] = [
-                            'id' => 'roles',
-                            'label' => 'Manage Roles',
-                            'link' => $url('roles')
-                        ];
+                    'id' => 'roles',
+                    'label' => 'Manage Roles',
+                    'link' => $url('roles')
+                ];
+            }
+
+            if ($this->rbacManager->isGranted(null, 'permission.manage')) {
+                $adminDropdownItems[] = [
+                    'id' => 'permissions',
+                    'label' => 'Manage Permissions',
+                    'link' => $url('permissions')
+                ];
             }
 
             if (count($adminDropdownItems)!=0) {
@@ -114,7 +97,7 @@ class NavManager
             }
 
             $items[] = [
-                'id' => 'logout',
+                'id' => 'userid',
                 'label' => $this->authService->getIdentity(),
                 'float' => 'right',
                 'dropdown' => [

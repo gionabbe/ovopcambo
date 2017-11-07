@@ -15,8 +15,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Freehand' rel='stylesheet' type='text/css'>
 
         <!-- Le styles -->
-        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-                        ->prependStylesheet($this->basepath('highmaps/css/highcharts.css'))
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/ovop.png'])
+                        // ->prependStylesheet($this->basepath('highmaps/css/highcharts.css'))
                         ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
                         ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
                         ->prependStylesheet($this->basePath('css/style.css'))
@@ -24,14 +24,14 @@
 
         <!-- Scripts -->
         <?= $this->headScript()
-            ->prependFile($this->basepath('highmaps/countries/kh/kh-all.js'))
-            ->prependFile($this->basepath('highmaps/js/highmaps.js'))
+            // ->prependFile($this->basepath('highmaps/countries/kh/kh-all.js'))
+            // ->prependFile($this->basepath('highmaps/js/highmaps.js'))
             ->prependFile($this->basePath('js/bootstrap.min.js'))
             ->prependFile($this->basePath('js/jquery-2.2.4.min.js'))
             ->prependFile($this->basepath('js/script.js'))
         ?>
     </head>
-    <body>
+    <body class="body">
     	<div class="page-header">
     		<div class="container">
     			<div class="row">
@@ -89,9 +89,6 @@
                     </div>
                 </div>
                 <hr>
-                <!-- <footer>
-                    <p>Copyright &copy; <?// = date('Y') ?> &nbsp; The One Village One Product Movement of Cambodia. All rights reserved.</p>
-                </footer> -->
             </div>
         </div>
         <div class="page-footer">
@@ -103,10 +100,10 @@
 								<li><a href="<?= $this->url('about')?>" target="_blank">About</a></li>
 								<li><a href="<?= $this->url('mission')?>" target="_blank">Mission</a></li>
 								<li><a href="<?= $this->url('vision')?>" target="_blank">Vision</a></li>
-								<li><a href="<?// = $this->url('policy')?>" target="_blank">Privacy</a></li>
-								<li><a href="<?// = $this->url('terms')?>" target="_blank">Terms</a></li>
-								<li><a href="<?// = $this->url('policy')?>" target="_blank">Contact</a></li>
-								<li><a href="<?// = $this->url('terms')?>" target="_blank">Help</a></li>
+								<li><a href="<?= $this->url('privacy')?>" target="_blank">Privacy</a></li>
+								<li><a href="<?= $this->url('terms')?>" target="_blank">Terms</a></li>
+								<li><a href="<?= $this->url('contact')?>" target="_blank">Contact</a></li>
+								<li><a href="<?= $this->url('help')?>" target="_blank">Help</a></li>
 							</ul>
         				</div>
         			</div>

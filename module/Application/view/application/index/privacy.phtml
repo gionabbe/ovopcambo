@@ -1,0 +1,20 @@
+<?php
+$this->headTitle('Privacy');
+
+$this->mainMenu()->setActiveItemId('privacy');
+
+$this->pageBreadcrumbs()->setItems([
+            'Home'      => $this->url('home'),
+            'Privacy'   => $this->url('privacy'),
+            ]);
+?>
+
+<h1>Privacy</h1>
+
+<p>
+    Privacy name: <?= $this->escapeHtml($appName) ?>
+</p>
+
+<p>
+    Privacy description: <?= $this->escapeHtml($appDescription) ?>
+</p>

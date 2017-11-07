@@ -1,0 +1,20 @@
+<?php
+$this->headTitle('Contact');
+
+$this->mainMenu()->setActiveItemId('contact');
+
+$this->pageBreadcrumbs()->setItems([
+            'Home'      => $this->url('home'),
+            'Contact'   => $this->url('contact'),
+            ]);
+?>
+
+<h1>Contact</h1>
+
+<p>
+    Contact name: <?= $this->escapeHtml($appName) ?>
+</p>
+
+<p>
+    Contact description: <?= $this->escapeHtml($appDescription) ?>
+</p>

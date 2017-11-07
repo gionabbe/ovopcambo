@@ -1,0 +1,20 @@
+<?php
+$this->headTitle('Help');
+
+$this->mainMenu()->setActiveItemId('help');
+
+$this->pageBreadcrumbs()->setItems([
+            'Home'      =>$this->url('home'),
+            'Help'    => $this->url('help'),
+            ]);
+?>
+
+<h1>Help</h1>
+
+<p>
+    Help name: <?= $this->escapeHtml($appName) ?>
+</p>
+
+<p>
+    Help description: <?= $this->escapeHtml($appDescription) ?>
+</p>

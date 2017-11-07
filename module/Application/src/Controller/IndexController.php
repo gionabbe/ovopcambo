@@ -83,6 +83,70 @@ class IndexController extends AbstractActionController
     }
 
     /**
+     * This is the "privacy" action. It is used to display the "Privacy Policy" page.
+     */
+    public function privacyAction()
+    {
+        $appName = 'Privacy Policy';
+        $appDescription = 'This is the privacy policy page of ovop project';
+
+        // Return variables to view script with the help of
+        // ViewObject variable container
+        return new ViewModel([
+            'appName' => $appName,
+            'appDescription' => $appDescription
+        ]);
+    }
+
+    /**
+     * This is the "terms" action. It is used to display the "Terms of Use" page.
+     */
+    public function termsAction()
+    {
+        $appName = 'Terms of Use';
+        $appDescription = 'This is the terms of use page of ovop project';
+
+        // Return variables to view script with the help of
+        // ViewObject variable container
+        return new ViewModel([
+            'appName' => $appName,
+            'appDescription' => $appDescription
+        ]);
+    }
+
+    /**
+     * This is the "contact" action. It is used to display the "Contact" page.
+     */
+    public function contactAction()
+    {
+        $appName = 'Contact Us';
+        $appDescription = 'This is the contact page of ovop project';
+
+        // Return variables to view script with the help of
+        // ViewObject variable container
+        return new ViewModel([
+            'appName' => $appName,
+            'appDescription' => $appDescription
+        ]);
+    }
+
+    /**
+     * This is the "help" action. It is used to display the "Help" page.
+     */
+    public function helpAction()
+    {
+        $appName = 'OVOP Help';
+        $appDescription = 'This is the help page of ovop project';
+
+        // Return variables to view script with the help of
+        // ViewObject variable container
+        return new ViewModel([
+            'appName' => $appName,
+            'appDescription' => $appDescription
+        ]);
+    }
+
+    /**
      * The "settings" action displays the info about currently logged in user.
      */
     public function settingsAction()

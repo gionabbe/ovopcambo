@@ -1,0 +1,87 @@
+<?php
+$this->headTitle('Register');
+
+$this->mainMenu()->setActiveItemId('register');
+
+$form->get('full_name')->setAttributes([
+    'class'=>'form-control',
+    'placeholder'=>'John Doe'
+    ]);
+
+$form->get('email')->setAttributes([
+    'class'=>'form-control',
+    'placeholder'=>'name@example.com'
+    ]);
+
+$form->get('password')->setAttributes([
+    'class'=>'form-control',
+    'placeholder'=>'Enter password',
+    ]);
+
+$form->get('confirm_password')->setAttributes([
+    'class'=>'form-control',
+    'placeholder'=>'Retype password',
+    ]);
+
+$form->get('roles')->setAttributes([
+    'class'=>'form-control'
+    ]);
+
+$form->get('status')->setAttributes([
+    'class'=>'form-control'
+    ]);
+
+$form->get('submit')->setAttributes(['class'=>'btn btn-primary btn-block']);
+
+$form->prepare();
+?>
+
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+        <?= $this->form()->openTag($form); ?>
+
+    	<h2 class="form-register-heading text-center">Register</h2>
+
+        <div class="zend-form">
+            <?= $this->formLabel($form->get('full_name')); ?>
+            <?= $this->formElement($form->get('full_name')); ?>
+            <?= $this->formElementErrors($form->get('full_name')); ?>
+        </div>
+        <div class="zend-form">
+            <?= $this->formLabel($form->get('email')); ?>
+            <?= $this->formElement($form->get('email')); ?>
+            <?= $this->formElementErrors($form->get('email')); ?>
+        </div>
+        <div class="zend-form">
+            <?= $this->formLabel($form->get('password')); ?>
+            <?= $this->formElement($form->get('password')); ?>
+            <?= $this->formElementErrors($form->get('password')); ?>
+        </div>
+        <div class="zend-form">
+            <?= $this->formLabel($form->get('confirm_password')); ?>
+            <?= $this->formElement($form->get('confirm_password')); ?>
+            <?= $this->formElementErrors($form->get('confirm_password')); ?>
+        </div>
+        <div class="zend-form" id="default_status">
+            <?= $this->formLabel($form->get('status')); ?>
+            <?= $this->formElement($form->get('status')); ?>
+            <?= $this->formElementErrors($form->get('status')); ?>
+        </div>
+        <div class="zend-form" id="default_roles">
+            <?= $this->formLabel($form->get('roles')); ?>
+            <?= $this->formElement($form->get('roles')); ?>
+            <?= $this->formElementErrors($form->get('roles')); ?>
+        </div>
+        <?= $this->formElement($form->get('submit')); ?>
+
+        <hr>
+
+        <p class="agreed">
+            By clicking the <i>Create</i> button above, you agree to our <a href="<?= $this->url('privacy') ?>">Privacy Policy</a>
+            and the <a href="<?= $this->url('terms') ?>">Terms of Use</a>.
+        </p>
+
+        <?= $this->form()->closeTag(); ?>
+    </div>
+</div>
+

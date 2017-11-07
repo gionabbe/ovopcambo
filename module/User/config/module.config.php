@@ -8,6 +8,16 @@ use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 return [
     'router' => [
         'routes' => [
+            'register' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route' => '/register',
+                    'defaults' => [
+                        'controller' => Controller\AuthController::class,
+                        'action' => 'register'
+                    ],
+                ],
+            ],
             'login' => [
                 'type' => Literal::class,
                 'options' => [
@@ -96,8 +106,8 @@ return [
         'factories' => [
             Controller\AuthController::class => Controller\Factory\AuthControllerFactory::class,
             Controller\PermissionController::class => Controller\Factory\PermissionControllerFactory::class,
-            Controller\RoleController::class => Controller\Factory\RoleControllerFactory::class,    
-            Controller\UserController::class => Controller\Factory\UserControllerFactory::class, 
+            Controller\RoleController::class => Controller\Factory\RoleControllerFactory::class,
+            Controller\UserController::class => Controller\Factory\UserControllerFactory::class,
         ],
     ],
     // We register module-provided controller plugins under this key.

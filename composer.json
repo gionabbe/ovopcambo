@@ -31,7 +31,29 @@
         "zendframework/zend-serializer": "^2.8",
         "zendframework/zend-permissions-rbac": "^2.5",
         "doctrine/data-fixtures": "^1.2",
-        "zendframework/zend-stdlib": "^3.1"
+        "zendframework/zend-stdlib": "^3.1",
+        "zendframework/zend-developer-tools": "^1.1",
+        "squizlabs/php_codesniffer": "^3.0",
+        "friendsofphp/php-cs-fixer": "^2.5",
+        "zendframework/zend-mvc-i18n": "^1.0",
+        "zendframework/zend-navigation": "^2.8",
+        "zendframework/zend-permissions-acl": "^2.6",
+        "zendframework/zend-servicemanager-di": "^1.1",
+        "zendframework/zend-soap": "^2.6",
+        "zendframework/zend-text": "^2.6",
+        "zendframework/zend-log": "^2.9",
+        "zendframework/zend-i18n-resources": "^2.5",
+        "zendframework/zend-feed": "^2.8",
+        "zendframework/zend-db": "^2.8",
+        "zendframework/zend-mail": "^2.8",
+        "zendframework/zend-xml2json": "^3.0",
+        "zendframework/zend-xmlrpc": "^2.6",
+        "zendframework/zend-mvc-console": "^1.1",
+        "zendframework/zend-json-server": "^3.0",
+        "zendframework/zend-console": "^2.6",
+        "zendframework/zend-ldap": "^2.8",
+        "zendframework/zendservice-recaptcha": "^3.0",
+        "bjyoungblood/bjy-profiler": "^1.1"
     },
     "autoload": {
         "psr-4": {
@@ -47,9 +69,12 @@
     },
     "extra": [],
     "scripts": {
+    	"cs-check": "phpcs",
+        "cs-fix": "phpcbf",
         "development-disable": "zf-development-mode disable",
         "development-enable": "zf-development-mode enable",
         "development-status": "zf-development-mode status",
-        "serve": "php -S 0.0.0.0:8080 -t public/ public/index.php"
+        "serve": "php -S 0.0.0.0:8080 -t public/ public/index.php",
+        "test": "phpunit"
     }
 }

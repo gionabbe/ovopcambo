@@ -1,0 +1,20 @@
+<?php
+$this->headTitle('Terms');
+
+$this->mainMenu()->setActiveItemId('terms');
+
+$this->pageBreadcrumbs()->setItems([
+            'Home'      =>$this->url('home'),
+            'Terms'    => $this->url('terms'),
+            ]);
+?>
+
+<h1>Terms</h1>
+
+<p>
+    Terms name: <?= $this->escapeHtml($appName) ?>
+</p>
+
+<p>
+    Terms description: <?= $this->escapeHtml($appDescription) ?>
+</p>

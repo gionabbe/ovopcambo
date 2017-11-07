@@ -1,9 +1,5 @@
-body {
+body.body {
 	font-family: 'Open Sans', helvetica, arial;
-}
-
-.zf-green {
-    color: #68b604;
 }
 
 .btn-success {
@@ -115,9 +111,16 @@ form ul li {
 	margin: 0 auto;
 }
 
-/* login page */
-.text {
+/* register/login page */
+.zend-form {
 	margin-bottom: 10px;
+}
+#default_status,
+#default_roles {
+	display: none;
+}
+.agreed {
+	font-size: smaller;
 }
 
 ul.footer-top-link {
